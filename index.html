@@ -9,13 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .hero {
-            background: url('images/hero3.jpg') no-repeat center center;
+            position: relative;
+            background: url('images/hero1.jpg') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 120px 0;
             text-align: center;
             height: 100vh;
         }
+        .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+    z-index: 1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
@@ -27,6 +43,11 @@
         .services {
             padding: 60px 0;
         }
+
+        .contact {
+            padding: 60px 0;
+        }
+        
         .services .icon {
             font-size: 3rem;
             margin-bottom: 15px;
@@ -204,15 +225,15 @@
     </section>
 -->
     <!-- Contact Section -->
-    <section id="contact" class="contact text-center py-5">
+    <section id="contact" class="contact text-center">
         <div class="container">
-            <div class="row">
-                <div class="col">
+            <div class="row mt-4">
+                <div class="col-md-6 p-4">
                     <h2>Contact Us</h2>
                     <p class="lead">Have any questions? We'd love to hear from you!</p>
                     <a href="mailto:info@smartsure.com" class="btn btn-primary">Email Us at info@smartsure.com</a>
                 </div>
-                <div class="col">
+                <div class="col-md-6">
                     <h2>Join Waitlist</h2>
                     <p class="lead">Would you like to among out first partners?!</p>
                     <a href="mailto:info@smartsure.com" class="btn btn-info">Join Waitlist Here</a>
@@ -221,7 +242,6 @@
 
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
